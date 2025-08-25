@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leitura - Bíblia Clara</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 id="titulo">Carregando...</h2>
+    <div id="versiculos"></div>
+
+    <div class="navegacao">
+      <button onclick="anterior()">⬅️ Capítulo Anterior</button>
+      <button onclick="proximo()">Próximo Capítulo ➡️</button>
+    </div>
+    <a href="index.html" class="btn voltar">Voltar ao Início</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const livro = params.get("livro") || "Salmos";
+      const cap = parseInt(params.get("cap")) || 23;
+      carregarCapitulo(livro, cap);
+    });
+  </script>
+</body>
+</html>
