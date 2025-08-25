@@ -1,0 +1,31 @@
+<!DOCTYPE hml>t
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bíblia Clara</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div class="container">
+    <h1>Bíblia Clara</h1>
+    <p>Palavra de Deus, clara e acessível a todos</p>
+
+    <nav>
+      <a href="leitura.html" class="btn">📖 Ler a Bíblia</a>
+      <a href="busca.html" class="btn">🔍 Buscar Versículo</a>
+      <a href="favoritos.html" class="btn">⭐ Favoritos</a>
+      <a href="plano.html" class="btn">📅 Leitura Diária</a>
+    </nav>
+
+    <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Modo Escuro</button>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
